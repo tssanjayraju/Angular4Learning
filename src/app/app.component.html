@@ -10,11 +10,15 @@
       </div>
       <hr>
 
-      <div class="row align-items-center">
+      <div class="row">
         <div class="col-xs-7 ">
           <app-servers></app-servers>
+<br><br>
+<div app-warning-alert></div>
 <br>
-          <input type="text" placeholder="Enter Something" [(ngModel)]="name">
+<app-success-alert></app-success-alert>
+<br>
+<input type="text" placeholder="Enter Something" [(ngModel)]="name">
           <p>{{name}}</p>
         </div>
       </div>
