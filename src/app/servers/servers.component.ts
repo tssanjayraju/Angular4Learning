@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
+  userName = '';
+
   constructor() { }
 
   ngOnInit() {
+  }
+  onUserReset(){
+this.userName = '';
+
   }
 
 }
