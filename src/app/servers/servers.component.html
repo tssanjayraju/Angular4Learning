@@ -8,9 +8,16 @@
             <button class="btn btn-primary" [disabled]="userName.length == 0" (click)="onUserReset()">Reset User</button>
             <br><br>
             <p>The UserName typed above was : {{ userName }}</p>
-            <app-server></app-server>
             <br>
-            <app-server></app-server>
+            <label>Server Name :</label> 
+            <input type="text" [(ngModel)]="serverName" class="form-control">
+            <br>
+            <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onServerAdd()">Add Server</button>
+            <br>
+            <p *ngIf="serverCreated" > Server was Created</p>
+            <br>
+            <app-server *ngFor="let server of servers"></app-server>
+            
 
 
         </div>
